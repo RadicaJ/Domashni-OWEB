@@ -1,0 +1,19 @@
+h1 { color: rgb(200, 127, 198); font-family: sans-serif;}
+body { font: 14px/18px Helvetica, Verdana, sans-serif;
+    background: linear-gradient(45deg, rgb(253, 253, 253), rgb(227, 231, 127)); }
+legend {
+    background-color: rgb(217, 144, 204);
+    color: rgb(255, 255, 255);
+    padding: 3px 6px;
+}
+
+p {
+    color: rgb(144, 80, 80);
+    height: 50%;
+    width: 50%;
+    background-color: powderblue;
+  }
+ 
+
+
+
