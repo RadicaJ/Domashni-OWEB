@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+body {
+    background-color: green;
+    background-image: -webkit-linear-gradient(45deg, green 45%, rgb(1, 97, 1) 55%);
+    min-height: 800px;
+}
+
+#game{
+    height: 7100px;
+    width: 390px; /* za da imam 3 mozhni pozicii od po 130px*/
+    border:1px solid black;
+    margin: 1rem auto;
+    background-image: url(staza.jpg);
+    background-size: contain;
+    overflow: hidden;
+    
+
+}
+#zajak{
+    height: 100px;
+    width: 130px;
+    background-color: transparent;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    animation: move 10s linear infinite;
+}
+
+#zajak img{
+    height: 100px;
+}
+@keyframes move {
+    0%{
+        top: 100px;
+    }
+    100%{
+        top: 7101px;
+    }
+}
+
+#zhelka{
+    height: 100px;
+    width: 130px;
+    background-color: transparent;
+    position: relative;
+    top: 250px;
+    left: 260px; /*260px levo od the corner of the box*/
+    text-align: center;
+    animation: move 10s linear infinite;
+}
+
+#zhelka img{
+    height: 100px;
+}
+@keyframes move {
+    0%{
+        top: 0px; /*od koja vertikalna visina da pochuva*/
+    }
+    100%{
+        top: 7101px; /*max do kade mozhe da odi*/
+    }
+
+    
+
+
+
+}
+
+#result{
+    height: 200px;
+    width: 400px;
+    background-color: red;
+    margin: 1rem auto;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    display: none;
+
+}
+#score{
+    font-size: 2.2rem;
+    color: purple;
+}
+
+#btn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(100, 197, 111);
+    color:brown;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 25px;
+}
