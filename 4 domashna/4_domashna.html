@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Pronajdete go produktot</h2>
+<p>Vnesete ime, kod, ili proizvoditel:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Ime</th>
+    <th>Kod</th>
+    <th>Proizvoditel</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>Infallible Total Cover Foundation</td>
+    <td>568687</td>
+    <td>L'Oréal Paris </td>
+  </tr>
+  <tr>
+    <td>BIO WATERY SUN CREAM SPF50+ PA+++</td>
+    <td>789456</td>
+    <td>TOCOBO</td>
+  </tr>
+  <tr>
+    <td>Longwear Liquid Concealer</td>
+    <td>456789</td>
+    <td>Maybelline</td>
+  </tr>
+  <tr>
+    <td>Ultimate Blends Hair Food</td>
+    <td>654321</td>
+    <td>Garnier</td>
+  </tr>
+  <tr>
+    <td>SPF 50 Oil control</td>
+    <td>123456</td>
+    <td>Eucerin</td>
+  </tr>
+  <tr>
+    <td>CURLS Shampoo</td>
+    <td>654782</td>
+    <td>SYOSS</td>
+  </tr>
+  </tbody>
+</table>
+  
+</body>
+</html>
